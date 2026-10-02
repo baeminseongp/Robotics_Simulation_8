@@ -16,11 +16,13 @@
 
 ## 결과
 
-실행 중이며 완료된 JSON 값을 이 표에 기록한다.
+평가는 2026-10-02에 완료했으며, 원본 출력은 `results/curriculum_seed0_combined.json`에 저장했다.
 
 | Suite | Episodes | Episode return mean | Episode return std |
 | --- | ---: | ---: | ---: |
-| Combined | 100 | pending | pending |
+| Combined | 100 | **29.118270** | **12.040080** |
+
+JSON에는 100개 environment의 cumulative episode return이 개별로 포함되어 있다. `episode_return_mean`과 `episode_return_std`는 각각 그 100개 값의 평균과 sample standard deviation이다.
 
 ## 해석
 
@@ -33,4 +35,3 @@ Combined는 held-out rough terrain과 training 범위 밖의 낮은 friction을 
 - 100개 environment를 동일한 evaluation seed로 평가
 - Smoke checkpoint 제외
 - Evaluation 중 parameter update 금지
-
