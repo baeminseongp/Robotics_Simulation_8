@@ -46,6 +46,12 @@
 <a id="experiments"></a>
 ## 4. Experiment — 학습 비교와 평가
 
+### 4.0 학습 환경: 실제 생성 mesh
+
+[![seed 10000으로 생성된 3×3 학습 타일과 Flat, Noise, Blocks, Slope의 실제 mesh](reports/training_terrain_mesh.png)](reports/training_terrain_mesh.png)
+
+학습 당시 Isaac Lab terrain cache에서 읽은 실제 OBJ mesh다. 왼쪽은 Terrain DR generator의 첫 3×3 tile이며, 오른쪽은 네 family에서 난이도 약 0.45의 타일을 확대한 것이다. 각 tile은 8 × 8 m이고, **z축만 형태를 읽기 위해 5배 확대**했다. 평지와 네 terrain family의 비율은 전체 학습 mesh에서 20/30/30/20%로 샘플링된다. [이미지 생성 코드](reports/plot_training_terrain_mesh.py) · [Terrain DR 구현](source/isaaclab_tasks/isaaclab_tasks/manager_based/classic/ant/generalization/ant_generalization_env_cfg.py)
+
 ### 4.1 학습 중 누적 ablation
 
 각 seed의 마지막 100 iteration(900–999) `Train/mean_reward`를 평균하고, 3개 seed 간 mean ± sample std를 계산했다.

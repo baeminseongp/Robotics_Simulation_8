@@ -55,6 +55,8 @@ H1–H4는 **설계 가설**이다. 현재 보관된 데이터로 검증할 수 
 
 [실제 저장된 env 설정](../configs/curriculum_seed0_env.yaml) · [agent 설정](../configs/curriculum_seed0_agent.yaml) · [15개 run 로그·설정](../logs/rsl_rl/) · [실행 명령](../README.md#reproduce)
 
+학습 mesh의 실제 생성 모습은 [README의 Experiment 그림](../README.md#40-학습-환경-실제-생성-mesh)에서 확인할 수 있다. 그림은 실행 당시 cache의 OBJ를 읽는다.
+
 ## 5. 학습·평가 분리
 
 | 구분 | 지형 seed | 질문 |
